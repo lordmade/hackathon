@@ -32,23 +32,19 @@
   <section class="min-h-screen flex flex-col lg:flex-row relative">
     
     <!-- LEFT SIDE: Solid Primary Color + Content -->
-    <div class="bg-primary text-white flex-1 flex flex-col justify-center relative">
-      
-      <!-- Optional small logo in top-left (you can remove if not needed) -->
-      <div class="absolute top-8 left-8 z-10">
-        <img src="https://i.postimg.cc/zf5Lydv2/Blue-and-White-Modern-Hackathon-Linked-In-Post-(2).png" 
-             alt="EDU-HACK Logo" 
-             class="h-14 md:h-16 drop-shadow-lg">
-      </div>
+    <div class="bg-primary text-white flex-1 flex flex-col justify-center relative overflow-hidden">
 
       <div class="container mx-auto px-6 lg:px-12 xl:px-20 py-20">
-        <div class="max-w-xl space-y-8 mt-16 lg:mt-0">
-          
-          <!-- MAIN LOGO INSIDE WHITE BOX (replaces text) -->
-          <div class="bg-white rounded-xl p-6 shadow-2xl max-w-xs">
-            <img src="https://i.postimg.cc/zf5Lydv2/Blue-and-White-Modern-Hackathon-Linked-In-Post-(2).png" 
-                 alt="EDU-HACK 2026 Logo" 
-                 class="w-full h-auto object-contain">
+        <div class="max-w-xl space-y-10 mt-16 lg:mt-0">
+
+          <!-- ELEGANT LOGO BOX -->
+          <div class="relative group">
+            <div class="absolute -inset-2 bg-white/30 rounded-3xl blur-xl group-hover:bg-white/40 transition duration-500"></div>
+            <div class="relative bg-white rounded-3xl p-8 shadow-2xl ring-4 ring-white/20 overflow-hidden transform hover:scale-105 transition-all duration-300">
+              <img src="https://i.postimg.cc/zf5Lydv2/Blue-and-White-Modern-Hackathon-Linked-In-Post-(2).png" 
+                   alt="EDU-HACK 2026 Logo" 
+                   class="w-full h-auto object-contain drop-shadow-md">
+            </div>
           </div>
 
           <p class="text-2xl lg:text-3xl font-semibold opacity-90">
@@ -67,7 +63,7 @@
           </p>
 
           <!-- COMPACT COUNTDOWN -->
-          <div class="flex items-center gap-6 mt-8 bg-white/20 backdrop-blur-md rounded-2xl px-8 py-5 w-fit">
+          <div class="flex items-center gap-6 mt-8 bg-white/20 backdrop-blur-md rounded-2xl px-8 py-5 w-fit border border-white/30">
             <div class="text-center">
               <div class="text-4xl font-black" id="days">000</div>
               <div class="text-xs uppercase tracking-wider opacity-80">Days</div>
@@ -172,7 +168,7 @@
       document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
 
       if (distance < 0) {
-        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE! 🚀</div>";
+        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE! Rocket</div>";
       }
     };
 
