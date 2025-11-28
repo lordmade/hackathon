@@ -25,21 +25,13 @@
       }
     }
   </script>
-  <style>
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-    .hex-pattern {
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z' fill='%23e9d8fd' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
-    }
-  </style>
 </head>
 <body class="font-sans text-gray-800 overflow-x-hidden">
 
   <!-- HERO SECTION – SPLIT LAYOUT -->
   <section class="min-h-screen flex flex-col lg:flex-row">
-    <!-- LEFT SIDE: Gradient + Text + Countdown -->
-    <div class="gradient-bg text-white flex-1 flex items-center relative hex-pattern">
+    <!-- LEFT SIDE: Solid Primary Color #6B46C1 -->
+    <div class="bg-primary text-white flex-1 flex items-center">
       <div class="container mx-auto px-6 lg:px-12 xl:px-20 py-20">
         <div class="max-w-xl space-y-8">
           <div class="flex items-center space-x-4">
@@ -59,14 +51,14 @@
             <span class="text-accent">HACKATHON</span>
           </h2>
 
-          <p class="text-lg lg:text-xl leading-relaxed text-primary">
+          <p class="text-lg lg:text-xl leading-relaxed">
             Partner with us in empowering the next generation of innovators!
             We bring together young innovators, developers, creators, and problem solvers
             to build impactful solutions for our Education System.
           </p>
 
           <!-- COMPACT COUNTDOWN -->
-          <div class="flex items-center gap-6 mt-8 bg-white/15 backdrop-blur-md rounded-2xl px-8 py-5 w-fit">
+          <div class="flex items-center gap-6 mt-8 bg-white/20 backdrop-blur-md rounded-2xl px-8 py-5 w-fit">
             <div class="text-center">
               <div class="text-4xl font-black" id="days">000</div>
               <div class="text-xs uppercase tracking-wider opacity-80">Days</div>
@@ -93,7 +85,7 @@
             <a href="#sponsorship" class="bg-white text-primary hover:bg-accent hover:text-white font-bold text-lg px-10 py-5 rounded-full transition shadow-lg text-center">
               Become a Sponsor
             </a>
-            <a href="#register" class="bg-primary text-white hover:bg-secondary hover:opacity-90 font-bold text-lg px-10 py-5 rounded-full transition shadow-lg text-center">
+            <a href="#register" class="bg-white text-primary hover:bg-accent hover:text-white font-bold text-lg px-10 py-5 rounded-full transition shadow-lg text-center">
               Register Interest
             </a>
           </div>
@@ -171,7 +163,7 @@
       document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
 
       if (distance < 0) {
-        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE! 🚀</div>";
+        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE! Rocket</div>";
       }
     };
 
