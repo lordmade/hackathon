@@ -29,11 +29,21 @@
 <body class="font-sans text-gray-800 overflow-x-hidden">
 
   <!-- HERO SECTION – SPLIT LAYOUT -->
-  <section class="min-h-screen flex flex-col lg:flex-row">
-    <!-- LEFT SIDE: Solid Primary Color #6B46C1 -->
-    <div class="bg-primary text-white flex-1 flex items-center">
+  <section class="min-h-screen flex flex-col lg:flex-row relative">
+    
+    <!-- LEFT SIDE: Solid Primary Color + Logo + Content -->
+    <div class="bg-primary text-white flex-1 flex flex-col justify-center relative">
+      
+      <!-- LOGO (Top-left) -->
+      <div class="absolute top-8 left-8 z-10">
+        <img src="https://via.placeholder.com/120/ffffff/6B46C1?text=EDU-HACK" 
+             alt="EDU-HACK Logo" 
+             class="h-16 md:h-20 drop-shadow-lg">
+        <!-- Replace the URL above with your real logo -->
+      </div>
+
       <div class="container mx-auto px-6 lg:px-12 xl:px-20 py-20">
-        <div class="max-w-xl space-y-8">
+        <div class="max-w-xl space-y-8 mt-20 lg:mt-0">
           <div class="flex items-center space-x-4">
             <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4">
               <h1 class="text-6xl lg:text-8xl font-black tracking-tighter">
@@ -104,11 +114,11 @@
       </div>
     </div>
 
-    <!-- RIGHT SIDE: White Background + Hero Image -->
-    <div class="bg-white flex-1 flex items-center justify-center p-8 lg:p-12">
+    <!-- RIGHT SIDE: Full-height Hero Image -->
+    <div class="flex-1 relative overflow-hidden">
       <img src="https://i.postimg.cc/Wb57nvmb/Blue-and-White-Modern-Hackathon-Linked-In-Post-(3).png"
            alt="EDU-HACK 2026 Hero"
-           class="rounded-2xl shadow-2xl max-w-full h-auto max-h-full object-contain"/>
+           class="absolute inset-0 w-full h-full object-cover">
     </div>
   </section>
 
@@ -163,7 +173,7 @@
       document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
 
       if (distance < 0) {
-        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE! Rocket</div>";
+        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE!</div>";
       }
     };
 
