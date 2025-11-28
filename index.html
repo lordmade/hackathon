@@ -31,25 +31,24 @@
   <!-- HERO SECTION – SPLIT LAYOUT -->
   <section class="min-h-screen flex flex-col lg:flex-row relative">
     
-    <!-- LEFT SIDE: Solid Primary Color + Logo + Content -->
+    <!-- LEFT SIDE: Solid Primary Color + Content -->
     <div class="bg-primary text-white flex-1 flex flex-col justify-center relative">
       
-      <!-- LOGO (Top-left) -->
+      <!-- Optional small logo in top-left (you can remove if not needed) -->
       <div class="absolute top-8 left-8 z-10">
-        <img src="https://via.placeholder.com/120/ffffff/6B46C1?text=EDU-HACK" 
+        <img src="https://i.postimg.cc/zf5Lydv2/Blue-and-White-Modern-Hackathon-Linked-In-Post-(2).png" 
              alt="EDU-HACK Logo" 
-             class="h-16 md:h-20 drop-shadow-lg">
-        <!-- Replace the URL above with your real logo -->
+             class="h-14 md:h-16 drop-shadow-lg">
       </div>
 
       <div class="container mx-auto px-6 lg:px-12 xl:px-20 py-20">
-        <div class="max-w-xl space-y-8 mt-20 lg:mt-0">
-          <div class="flex items-center space-x-4">
-            <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4">
-              <h1 class="text-6xl lg:text-8xl font-black tracking-tighter">
-                EDU<span class="text-accent">-HACK</span>
-              </h1>
-            </div>
+        <div class="max-w-xl space-y-8 mt-16 lg:mt-0">
+          
+          <!-- MAIN LOGO INSIDE WHITE BOX (replaces text) -->
+          <div class="bg-white rounded-xl p-6 shadow-2xl max-w-xs">
+            <img src="https://i.postimg.cc/zf5Lydv2/Blue-and-White-Modern-Hackathon-Linked-In-Post-(2).png" 
+                 alt="EDU-HACK 2026 Logo" 
+                 class="w-full h-auto object-contain">
           </div>
 
           <p class="text-2xl lg:text-3xl font-semibold opacity-90">
@@ -143,7 +142,7 @@
   <footer class="bg-primary text-white py-12">
     <div class="container mx-auto px-6 text-center">
       <div class="flex justify-center items-center space-x-4 mb-6">
-        <img src="https://via.placeholder.com/80/ffffff/6B46C1?text=EDU" alt="EDU-HACK Logo" class="h-16"/>
+        <img src="https://i.postimg.cc/zf5Lydv2/Blue-and-White-Modern-Hackathon-Linked-In-Post-(2).png" alt="EDU-HACK Logo" class="h-16"/>
         <h3 class="text-3xl font-bold">EDU-HACK 2026</h3>
       </div>
       <p class="text-lg">Code 4 Education • Mokopane, Limpopo • March 2026</p>
@@ -173,7 +172,7 @@
       document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
 
       if (distance < 0) {
-        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE!</div>";
+        document.querySelector(".flex.items-center.gap-6").innerHTML = "<div class='text-3xl font-bold'>EDU-HACK 2026 IS LIVE! 🚀</div>";
       }
     };
 
