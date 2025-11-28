@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EDU-HACK 2026 | Code 4 Education Hackathon</title>
-  <meta name="description" content="Join the biggest education-focused hackathon in Limpopo, March 2026. Developers, creators, and problem solvers unite to build impactful solutions for the future of education." />
+  <meta name="description" content="Join the biggest education-focused hackathon in Limpopo, March 2026." />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -15,101 +15,90 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Poppins', 'sans-serif'],
-          },
+          fontFamily: { sans: ['Poppins', 'sans-serif'] },
           colors: {
             primary: '#6B46C1',
             secondary: '#9F7AEA',
-            accent: '#D6BCFA',
-            light: '#F8F9FA',
+            accent: '#D6BCFA',    // Pink/Purple from your flyer
+            darkstroke: '#1a0033',
           }
         }
       }
     }
   </script>
   <style>
-    .gradient-bg {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.92) 0%, rgba(118, 75, 162, 0.92) 100%),
+                  url('https://i.postimg.cc/Wb57nvmb/Blue-and-White-Modern-Hackathon-Linked-In-Post-(3).png') center/cover no-repeat;
     }
     .hex-pattern {
       background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z' fill='%23e9d8fd' opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
     }
-    .text-glow {
-      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    .text-stroke {
+      -webkit-text-stroke: 2.5px var(--tw-text-stroke-color, #1a0033);
+      paint-order: stroke fill;
     }
   </style>
 </head>
 <body class="font-sans text-gray-800 overflow-x-hidden">
 
-  <!-- Hero Section -->
-  <section class="gradient-bg text-white min-h-screen flex items-center relative hex-pattern overflow-hidden">
+  <!-- Hero Section - Image as background + pink text -->
+  <section class="hero-bg hex-pattern min-h-screen flex items-center relative text-accent">
     <div class="container mx-auto px-6 lg:px-20 xl:px-32 py-20">
       <div class="grid lg:grid-cols-12 gap-12 items-center">
-
-        <!-- Left Content -->
-        <div class="space-y-8 lg:col-span-7 xl:col-span-6">
+        
+        <!-- Content (now centered left, on top of background image) -->
+        <div class="space-y-8 lg:col-span-8 xl:col-span-7">
 
           <!-- Logo + Title -->
           <div class="flex items-center gap-6">
-            <!-- EDU-HACK Logo (speech + code icon from your flyer) -->
             <img src="https://i.postimg.cc/3xVJ1YkY/eduhack-logo.png" 
                  alt="EDU-HACK Logo" 
-                 class="w-24 h-24 lg:w-32 lg:h-32 object-contain drop-shadow-2xl"/>
+                 class="w-28 h-28 lg:w-40 lg:h-40 object-contain drop-shadow-2xl"/>
             
-            <!-- Main Title -->
-            <h1 class="text-6xl lg:text-8xl font-black tracking-tighter leading-none">
-              EDU<span class="text-accent text-glow drop-shadow-2xl">-HACK</span>
+            <h1 class="text-7xl lg:text-9xl font-black tracking-tighter leading-none text-stroke text-accent drop-shadow-2xl">
+              EDU<span class="text-white">-HACK</span>
             </h1>
           </div>
 
-          <p class="text-3xl lg:text-4xl font-bold opacity-95 text-glow">
+          <p class="text-3xl lg:text-5xl font-bold drop-shadow-xl">
             Code 4 Education
           </p>
 
-          <h2 class="text-6xl lg:text-9xl font-black leading-tight text-glow">
+          <h2 class="text-7xl lg:text-10xl font-black leading-tight drop-shadow-2xl">
             2026 <br />
-            <span class="text-accent drop-shadow-2xl">HACKATHON</span>
+            <span class="text-white text-stroke">HACKATHON</span>
           </h2>
 
-          <p class="text-lg lg:text-xl max-w-lg leading-relaxed font-medium text-light opacity-95 text-glow">
+          <p class="text-xl lg:text-2xl max-w-2xl leading-relaxed font-semibold drop-shadow-lg">
             Partner with us in empowering the next generation of innovators!<br>
             We bring together young innovators, developers, creators, and problem solvers
             to build impactful solutions for our Education System.
           </p>
 
+          <!-- Buttons - Super visible -->
           <div class="flex flex-col sm:flex-row gap-6 pt-8">
-            <a href="#sponsorship" class="bg-white text-primary hover:bg-accent hover:text-white font-bold text-lg px-12 py-6 rounded-full transition shadow-2xl text-center transform hover:scale-105">
+            <a href="#sponsorship" class="bg-white text-primary hover:bg-accent hover:text-white font-black text-xl lg:text-2xl px-12 py-6 rounded-full transition shadow-2xl text-center transform hover:scale-110 hover:shadow-accent/50">
               Become a Sponsor
             </a>
-            <a href="#register" class="border-4 border-white hover:bg-white hover:text-primary font-bold text-lg px-12 py-6 rounded-full transition text-center backdrop-blur-sm bg-white/10 transform hover:scale-105">
+            <a href="#register" class="bg-transparent border-4 border-white hover:bg-white hover:text-primary font-black text-xl lg:text-2xl px-12 py-6 rounded-full transition shadow-2xl backdrop-blur-md text-center transform hover:scale-110">
               Register Interest
             </a>
           </div>
 
-          <div class="pt-12 space-y-4">
-            <p class="text-2xl lg:text-3xl font-bold flex items-center text-glow">
-              <svg class="w-10 h-10 mr-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          <!-- Location & Date -->
+          <div class="pt-12 space-y-5">
+            <p class="text-3xl lg:text-4xl font-black flex items-center drop-shadow-xl">
+              <svg class="w-12 h-12 mr-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
               Mokopane, Limpopo
             </p>
-            <p class="text-2xl lg:text-3xl font-bold flex items-center text-glow">
-              <svg class="w-10 h-10 mr-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm2 0a1 1 0 000 2h.01a1 1 0 100-2H8zm2 0a1 1 0 000 2h.01a1 1 0 100-2H10zm2 0a1 1 0 000 2h.01a1 1 0 100-2H12zm-8 4a1 1 0 000 2h.01a1 1 0 100-2H4zm2 0a1 1 0 000 2h.01a1 1 0 100-2H6zm2 0a1 1 0 000 2h.01a1 1 0 100-2H8zm2 0a1 1 0 000 2h.01a1 1 0 100-2H10zm2 0a1 1 0 000 2h.01a1 1 0 100-2H12z" clip-rule="evenodd"/></svg>
+            <p class="text-3xl lg:text-4xl font-black flex items-center drop-shadow-xl">
+              <svg class="w-12 h-12 mr-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm2 0a1 1 0 000 2h.01a1 1 0 100-2H8zm2 0a1 1 0 000 2h.01a1 1 0 100-2H10zm2 0a1 1 0 000 2h.01a1 1 0 100-2H12zm-8 4a1 1 0 000 2h.01a1 1 0 100-2H4zm2 0a1 1 0 000 2h.01a1 1 0 100-2H6zm2 0a1 1 0 000 2h.01a1 1 0 100-2H8zm2 0a1 1 0 000 2h.01a1 1 0 100-2H10zm2 0a1 1 0 000 2h.01a1 1 0 100-2H12z" clip-rule="evenodd"/></svg>
               March 2026
             </p>
           </div>
         </div>
 
-        <!-- Right Image - Far right -->
-        <div class="hidden lg:flex lg:col-span-5 xl:col-span-6 justify-end items-center">
-          <div class="relative">
-            <div class="absolute inset-0 bg-accent/40 blur-3xl rounded-full scale-150 -z-10 animate-pulse"></div>
-            <img
-              src="https://i.postimg.cc/Wb57nvmb/Blue-and-White-Modern-Hackathon-Linked-In-Post-(3).png"
-              alt="EDU-HACK 2026 Participant"
-              class="rounded-3xl shadow-2xl max-w-md xl:max-w-lg 2xl:max-w-xl hover:scale-105 transition-transform duration-500 border-8 border-white/20"
-            />
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -120,8 +109,7 @@
       <h2 class="text-5xl font-bold text-primary mb-8">A Call for Sponsorship</h2>
       <p class="text-xl max-w-4xl mx-auto leading-relaxed text-gray-700">
         Your support will directly impact hundreds of young innovators from across Limpopo and beyond.
-        By partnering with EDU-HACK 2026, you're investing in the future of education technology and
-        helping students turn bold ideas into real-world solutions.
+        By partnering with EDU-HACK 2026, you're investing in the future of education technology.
       </p>
       <div class="mt-12">
         <a href="mailto:sponsorship@eduhack.co.za" class="bg-primary text-white hover:bg-secondary font-bold text-xl px-12 py-6 rounded-full transition shadow-xl inline-block transform hover:scale-105">
@@ -133,7 +121,7 @@
 
   <!-- Footer -->
   <footer class="bg-primary text-white py-12">
-    <div class="container mx-auto px-6 6 text-center">
+    <div class="container mx-auto px-6 text-center">
       <div class="flex justify-center items-center space-x-4 mb-6">
         <img src="https://i.postimg.cc/3xVJ1YkY/eduhack-logo.png" alt="EDU-HACK Logo" class="h-16"/>
         <h3 class="text-3xl font-bold">EDU-HACK 2026</h3>
@@ -145,6 +133,5 @@
       <p class="mt-6 text-sm opacity-75">© 2026 EDU-HACK. All rights reserved.</p>
     </div>
   </footer>
-
 </body>
 </html>
