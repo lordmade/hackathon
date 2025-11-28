@@ -35,6 +35,7 @@
   </style>
 </head>
 <body class="font-sans text-gray-800 overflow-x-hidden">
+
   <!-- Hero Section -->
   <section class="gradient-bg text-white min-h-screen flex items-center relative hex-pattern">
     <div class="container mx-auto px-6 lg:px-20 xl:px-32 py-20">
@@ -48,18 +49,45 @@
               </h1>
             </div>
           </div>
+
           <p class="text-2xl lg:text-3xl font-semibold opacity-90">
             Code 4 Education
           </p>
+
           <h2 class="text-5xl lg:text-7xl font-bold leading-tight">
             2026 <br />
             <span class="text-accent">HACKATHON</span>
           </h2>
+
           <p class="text-lg lg:text-xl max-w-lg leading-relaxed text-primary">
             Partner with us in empowering the next generation of innovators!
             We bring together young innovators, developers, creators, and problem solvers
             to build impactful solutions for our Education System.
           </p>
+
+          <!-- COUNTDOWN TIMER -->
+          <div class="mt-10">
+            <p class="text-xl font-medium opacity-90 mb-4">Countdown to Launch</p>
+            <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+              <div class="bg-white/20 backdrop-blur-md rounded-2xl py-6 px-4">
+                <div class="text-5xl md:text-6xl font-black" id="days">000</div>
+                <div class="text-sm md:text-lg uppercase tracking-wider opacity-80">Days</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-md rounded-2xl py-6 px-4">
+                <div class="text-5xl md:text-6xl font-black" id="hours">00</div>
+                <div class="text-sm md:text-lg uppercase tracking-wider opacity-80">Hours</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-md rounded-2xl py-6 px-4">
+                <div class="text-5xl md:text-6xl font-black" id="minutes">00</div>
+                <div class="text-sm md:text-lg uppercase tracking-wider opacity-80">Minutes</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-md rounded-2xl py-6 px-4">
+                <div class="text-5xl md:text-6xl font-black" id="seconds">00</div>
+                <div class="text-sm md:text-lg uppercase tracking-wider opacity-80">Seconds</div>
+              </div>
+            </div>
+          </div>
+
           <div class="flex flex-col sm:flex-row gap-6 pt-6">
             <a href="#sponsorship" class="bg-white text-primary hover:bg-accent hover:text-white font-bold text-lg px-10 py-5 rounded-full transition shadow-lg text-center">
               Become a Sponsor
@@ -68,6 +96,7 @@
               Register Interest
             </a>
           </div>
+
           <div class="pt-10 space-y-3">
             <p class="text-2xl font-bold flex items-center">
               <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
@@ -79,6 +108,7 @@
             </p>
           </div>
         </div>
+
         <!-- Right Image -->
         <div class="flex justify-center lg:justify-end">
           <img src="https://i.postimg.cc/Wb57nvmb/Blue-and-White-Modern-Hackathon-Linked-In-Post-(3).png"
@@ -120,5 +150,33 @@
       <p class="mt-6 text-sm opacity-75">© 2026 EDU-HACK. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    const countdownDate = new Date("March 1, 2026 00:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days.toString().padStart(3, "0");
+      document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-4xl font-bold'>EDU-HACK 2026 IS LIVE! 🚀</div>";
+      }
+    };
+
+    // Update immediately and then every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
